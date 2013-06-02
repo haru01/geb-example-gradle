@@ -4,10 +4,11 @@ The build is setup to work with HTMLUnit, FireFox and Chrome. Have a look at the
 
 The following commands will launch the tests with the individual browsers:
 
-    ./gradlew htmlunitTest
     ./gradlew chromeTest
     ./gradlew firefoxTest
 
 To run with all, you can run:
 
     ./gradlew test
+
+    gradle build
