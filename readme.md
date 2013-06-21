@@ -14,3 +14,8 @@ To run with all, you can run:
 or
 
     gradle build
+
+
+in eclipse
+
+   VM arguments: -Dgeb.build.reportsDir=/tmp -Dgeb.env=firefox

@@ -7,6 +7,7 @@
 
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
 waiting {
 	timeout = 3
@@ -24,6 +25,10 @@ environments {
 	// See: http://code.google.com/p/selenium/wiki/FirefoxDriver
 	firefox {
 		driver = { new FirefoxDriver() }
+	}
+
+	htmlunit {
+		driver = { new HtmlUnitDriver() }
 	}
 
 }
