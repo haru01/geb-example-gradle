@@ -7,25 +7,18 @@ import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
 class GoogleTest extends GebReportingTest {
-
     @Test
-    void theFirstLinkShouldBeWikipedia() {
+    void "検索結果の一番目でWikipediaであること。遷移できること"() {
         to GoogleHomePage
 
-        // enter wikipedia into the search field
-        q = "wikipedia"
-
-        // wait for the change to results page to happen
-        // (google updates the page without a new request)
+		検索フォームに次を入力.with {
+			q = "wikipedia"
+		}
         at GoogleResultsPage
 
-        // is the first link to wikipedia?
-        firstResultLink.text() == "Wikipedia"
-
-        // click the link
-        firstResultLink.click()
+		assert 一番目のリンクのテキスト == "Wikipedia"		
+        一番目のリンクをクリックして遷移する
 
         waitFor { at WikipediaPage }
     }
-
 }
